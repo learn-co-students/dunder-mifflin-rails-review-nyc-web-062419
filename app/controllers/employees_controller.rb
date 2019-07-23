@@ -13,7 +13,7 @@ class EmployeesController < ApplicationController
 
   def update
     @employee = Employee.find(params[:id])
-    if @emplyee.valid?
+    if @employee.valid?
     @employee.update(employee_params)
     else
     flash[:message] = @employee.errors.full_messages[0]
