@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    ".learn": true,
+    ".gitignore": true,
+    "vendor": true,
+    "tmp": true,
+    "public": true,
+    "app/controllers/application_controller.rb": true,
+    "app/controllers/concerns": true,
+    "app/models/application_record.rb": true,
+    "app/views/layouts/application.html.erb": true,
+    "app/views/layouts": true,
+    "config/boot.rb": true,
+    "config/environment.rb": true,
+    "config/puma.rb": true,
+    "config/secrets.yml": true,
+    "config/spring.rb": true,
+    "package.json": true,
+    "README.md": true
+  }
+}
