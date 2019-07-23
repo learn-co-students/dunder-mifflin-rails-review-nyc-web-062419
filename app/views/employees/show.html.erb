@@ -1,0 +1,19 @@
+<p><%= @employee.first_name %></p>
+<p><%= @employee.last_name %></p>
+<p><%= @employee.alias %></p>
+<p><%= @employee.title %></p>
+<p><%= @employee.office %></p>
+<p><img src="<%=@employee.img_url%>"></p>
+<p><%= button_to "edit", edit_employee_path(@employee.id),method: :get  %></p>
+
+
+<!-- create_table "employees", force: :cascade do |t|
+#     t.string "first_name"
+#     t.string "last_name"
+#     t.string "alias"
+#     t.string "title"
+#     t.string "office"
+#     t.string "img_url"
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#     t.integer "dog_id" -->

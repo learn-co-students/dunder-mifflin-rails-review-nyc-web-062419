@@ -1,0 +1,14 @@
+<h2>Edit Page</h2>
+<% if flash.now[:message] %>
+<h3><%= flash.now[:message] %></h3>
+<% end %>
+<%= form_for @employee do |f| %>
+<p>First Name<%= f.text_field :first_name %></p>
+<p>Last Name<%= f.text_field :last_name %></p>
+<p>Alias<%= f.text_field :alias %></p>
+<p>Office <%=  f.text_field :office %></p>
+<p>Title <%=  f.text_field :title %></p>
+<p>img_url <%= f.text_field :img_url %></p>
+<p>Dog <%= f.collection_select :dog_id, @dogs,:id,:name %></p>
+<p><%= f.submit :submit %></p>
+<% end %>

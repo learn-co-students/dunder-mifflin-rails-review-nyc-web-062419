@@ -1,0 +1,5 @@
+<h2>Employees</h2>
+<% @employees.each do |e| %>
+<p><%= link_to  e.first_name, employee_path(e.id) %></p>
+<% end %>
+<p><%= button_to "new",new_employee_path,method: :get %></p>
