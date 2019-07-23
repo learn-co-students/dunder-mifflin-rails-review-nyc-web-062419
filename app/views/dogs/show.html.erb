@@ -1,0 +1,4 @@
+<li>Name: <%=@dog.name%></li>
+<li>Breed: <%=@dog.breed%></li>
+<li>Age: <%=@dog.age%></li>
+<br>Connected to:</br><%=@dog.employees.map{|x|x.first_name}%>

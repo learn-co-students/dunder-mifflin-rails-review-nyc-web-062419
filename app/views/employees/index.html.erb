@@ -1,0 +1,7 @@
+<% @employees.each do |employee| %>
+  <li><%= link_to  employee.first_name, "/employees/#{employee.id}"%>  <%= link_to "Edit Employee", "/employees/#{employee.id}/edit" %></li>
+<%end%>
+<br>
+<%= link_to "New Employee", "/employees/new" %>
+
+

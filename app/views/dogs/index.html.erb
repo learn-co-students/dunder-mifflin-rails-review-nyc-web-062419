@@ -1,0 +1,4 @@
+<% @dogs.each do |dog| %>
+  <li><%= link_to  dog.name, "/dogs/#{dog.id}" %></li>
+<%end%>
+

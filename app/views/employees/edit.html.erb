@@ -1,0 +1,35 @@
+<%= form_for @employee do |f| %>
+<p>
+  <%= f.label :first_name, "First Name:" %>
+  <%= f.text_field :first_name %>
+</p>
+<p>
+  <%= f.label :last_name, "Last Name:" %>
+  <%= f.text_field :last_name %>
+</p>
+<p>
+  <%= f.label :alias, "Alias:" %>
+  <%= f.text_field :alias %>
+</p>
+<p>
+  <%= f.label :title, "Title:" %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :office, "Office:" %>
+  <%= f.text_field :office %>
+</p>
+<p>
+    <!-- Sample usage (selecting the associated Author for an instance of Post, @post):
+
+    collection_select(:post, :author_id, Author.all, :id, :name_with_initial, prompt: true) -->
+  <%=f.collection_select :dog_id, @dogs, :id, :name, prompt: "Select a Doggo"%>
+</p>
+<p>
+    <%= f.label :img_url, "Image Url:" %>
+    <%= f.text_field :img_url %>
+  </p>
+<%= f.submit "submit"%>
+
+<% end %>
+
