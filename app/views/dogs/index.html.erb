@@ -1,0 +1,15 @@
+
+
+<h1>All Dogs</h1>
+
+<% @ordered_keys.each do |key|%>
+
+    <h2>Dogs with <%=key%> owner(s)</h2>
+
+    <% @dogs_hash[key].each do |dog|%>
+
+        <li><%= link_to  "#{dog.name}", dog_path(dog) %></li>
+
+    <% end %>
+
+<% end %>
