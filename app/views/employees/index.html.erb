@@ -1,0 +1,15 @@
+<h1>Employee list</h1>
+<br/>
+<%= button_to "Dogs Home Page", dogs_path, method: :get %>
+
+<h5><%= button_to "Create Employee", new_employee_path , method: :get%></h5>
+<h5><%=form_for(:employee, url: edit_employee_path(:id),method: :get )do |f|%>
+<%=f.collection_select :id,@employees,:id,:full_name %>
+<%=f.submit "Edit Employee"%>
+<%end%></h5>
+
+<ul>
+<% @employees.each do |e| %>
+<li><%= link_to e.full_name, e %></li>
+<%end%>
+</ul>
