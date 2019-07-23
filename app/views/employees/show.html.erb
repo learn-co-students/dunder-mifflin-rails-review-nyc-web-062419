@@ -1,0 +1,8 @@
+<h1>Employees#show</h1>
+<p>Find me in app/views/employees/show.html.erb</p>
+<h1> <%= @employee.first_name %> </h1>
+<h1> <%= @employee.last_name %> </h1>
+<h2> <%= @employee.alias %> </h2>
+<h2> <%= @employee.title %> </h2>
+<h2> <%= @employee.office %> </h2>
+<h2> <%= link_to @employee.dog.name, "/dogs/#{@employee.dog.id}" %> </h2>
