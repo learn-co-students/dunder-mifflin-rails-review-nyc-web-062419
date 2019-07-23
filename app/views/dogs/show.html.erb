@@ -1,0 +1,13 @@
+<h1><%= @dog.name %></h1>
+<p>I'm a <%=@dog.breed%></p>
+<br>
+<p><%=@dog.name%>'s Employees:</p>
+<% @employee.each do |employee| %>
+<li><%=link_to employee.first_name, employee_path(employee.id)%></li>
+<% end %>
+<br>
+<br>
+<%= link_to "Edit #{@dog.name}", edit_dog_path(@dog) %>
+<br>
+<br>
+<%= link_to  "See All Dogs", dogs_path %>
