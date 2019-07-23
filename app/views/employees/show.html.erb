@@ -1,0 +1,14 @@
+<h1><%= @employee.first_name %></h1>
+<%=  image_tag(@employee.img_url)  %>
+<p>
+    Title: <%= @employee.title %>
+    <br>
+    Alias: <%= @employee.alias %>
+    <br>
+    Office: <%= @employee.office %>
+</p>
+<br>
+<%= link_to  "Edit #{@employee.first_name}", edit_employee_path(@employee) %>
+<br>
+<br>
+<%= link_to "Employee Index", employees_path %>

@@ -1,0 +1,12 @@
+<h1>Dogs!</h1>
+<ul>
+    <%@dogs.each do |dog|%>
+      <li>
+        <%=link_to dog.name, dog_path(dog.id)%><br/>
+      </li>
+    <%end%>
+  
+  </ul>
+  <%= link_to  "Create New Dog", new_dog_path %>
+    <br>
+  <%= link_to "Employee Index", employees_path %>
