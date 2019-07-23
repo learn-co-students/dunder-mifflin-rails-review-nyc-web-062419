@@ -1,0 +1,15 @@
+
+<h1><%=@dog.name%></h1>
+
+<h3>Breed</h3>
+<%=@dog.breed%><br/>
+<h3>Age</h3>
+<%=@dog.age%><br/>
+<h3>Onwers</h3>
+<% @owners.each do |o| %>
+<li><%= link_to o.full_name, o %></li>
+<%end%>
+<br/>
+<%= button_to "Dogs Home Page", dogs_path, method: :get %>
+
+

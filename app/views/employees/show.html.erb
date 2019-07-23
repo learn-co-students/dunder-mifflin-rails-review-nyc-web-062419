@@ -1,0 +1,17 @@
+<% if flash[:message] %>
+<h1><%= flash[:message] %></h1>
+<% else %> 
+<h1><%= @employee.full_name %></h1>
+<% end %>
+
+<img src=<%=@employee.img_url%> alt=<%=@employee.full_name%> style="width:300px;height:300px;" >
+
+<br/>
+<h3>Alias: <%=@employee.alias%></h3>
+<h3>title: <%=@employee.title%></h3>
+<h3>office: <%=@employee.office%></h3>
+<br/>
+<h3>Dog: <%= link_to @employee.dog.name, @employee.dog %></h3>
+<br/>
+<%= button_to "Employee Home Page", employees_path, method: :get %>
+
