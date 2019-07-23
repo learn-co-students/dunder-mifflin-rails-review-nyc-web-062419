@@ -1,0 +1,9 @@
+<h1>Dogs#show</h1>
+<p>Find me in app/views/dogs/show.html.erb</p>
+<h1> <%= @dog.name %> </h1>
+<h2> <%= @dog.breed %> </h2>
+<h2> <%= @dog.age %> </h2>
+<h2> <% @dog.employees.each do |employee| %> </h2>
+<% full_name = "#{employee.first_name}" + " " + "#{employee.last_name}" %>
+<h2> <li> <%= link_to (full_name), "/employees/#{employee.id}" %>  </li> </h2>
+<%end%>

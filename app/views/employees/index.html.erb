@@ -1,0 +1,6 @@
+<h1>Employees#index</h1>
+<p>Find me in app/views/employees/index.html.erb</p>
+<% @employees.each do |employee| %>
+<% full_name = "#{employee.first_name}" + " " + "#{employee.last_name}" %>
+<h3> <li> <%=link_to full_name, "/employees/#{employee.id}" %>  </li> </h3>
+<%end%>
