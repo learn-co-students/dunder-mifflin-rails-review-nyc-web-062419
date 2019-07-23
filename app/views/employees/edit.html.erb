@@ -1,0 +1,11 @@
+<h1>Edit <%= @employee.name %></h1>
+
+<% if flash[:messages].length > 0 %> <% flash[:messages].each do |error| %>
+<h3 style="color:red"><%= error %></h3>
+<% end %> <% end %> <%= form_for @employee do |f| %> <%= f.label(:first_name,
+"First Name:") %> <%= f.text_field(:first_name) %> <%= f.label(:last_name, "Last
+Name:") %> <%= f.text_field(:last_name) %> <%= f.label(:alias, "Alias:") %> <%=
+f.text_field(:alias) %> <%= f.label(:title, "Title:") %> <%=
+f.text_field(:title) %> <%= f.label(:office, "Office:") %> <%=
+f.text_field(:office) %> <%= f.collection_select(:dog_id, @dogs, :id, :name,
+prompt: true) %> <%= f.submit %> <% end %>
