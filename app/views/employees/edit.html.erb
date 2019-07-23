@@ -1,0 +1,22 @@
+<h1>Edit <%=@employee.name%></h1>
+
+<h3><%if flash.now[:message]%>
+    <%=flash.now[:message]%>
+<%end%></h3>
+
+<%= form_for @employee do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :alias %>
+    <%= f.text_field :alias %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :office %>
+    <%= f.text_field :office %>
+    <%= f.collection_select :dog_id, @dogs, :id, :name, prompt: "Select a Dog"%>
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+    <%= f.submit "Save Employee"%>
+<% end %>
